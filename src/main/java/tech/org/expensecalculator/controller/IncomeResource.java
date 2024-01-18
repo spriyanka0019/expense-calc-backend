@@ -77,6 +77,11 @@ public class IncomeResource {
         return new ResponseEntity<>(categoryTypes, HttpStatus.OK);
     }
 
+    @GetMapping("/message")
+    public String getMessage() {
+        return "Message from code pipeline";
+    }
+
     @GetMapping("/user/{id}")
     public ResponseEntity<List<Income>> findIncomeByUserId(@PathVariable("id") Long id) {
         try {
